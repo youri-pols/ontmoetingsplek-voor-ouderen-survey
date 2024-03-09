@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import { TextField, Select } from "../components/fields";
 import React, { useState, useEffect } from "react";
@@ -118,7 +118,12 @@ export default function Home() {
                 ) : (
                     <div className="mt-6 text-center">
                         <h2 className="text-1xl lg:text-3xl font-bold">Bedankt voor je inzending!</h2>
-                        <p className="text-sm lg:text-md">Als je nog vragen of aanvullingen hebt, kan je mij altijd mailen op y.pols@student.fontys.nl</p>
+                        <p className="mt-4 text-sm lg:text-md">
+                            Als je nog vragen of aanvullingen hebt, kan je mij altijd mailen op{" "}
+                            <Link className="underline" href="mailto:y.pols@student.fontys.nl" target="_blank" title="Mail naar y.pols@student.fontys.nl">
+                                y.pols@student.fontys.nl
+                            </Link>
+                        </p>
                         <Confetti width={width} height={height} recycle={false} numberOfPieces={500} />{" "}
                     </div>
                 )}
