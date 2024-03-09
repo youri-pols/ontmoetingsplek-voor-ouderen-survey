@@ -4,22 +4,18 @@ const notion = new Client({
     auth: process.env.NOTION_API_KEY,
 });
 
-// Haal de huidige datum en tijd op
 const currentDateTime = new Date();
 
-// Datum formatteren
 const jaar = currentDateTime.getFullYear();
-const maand = String(currentDateTime.getMonth() + 1).padStart(2, "0"); // Maanden beginnen bij 0, dus +1
+const maand = String(currentDateTime.getMonth() + 1).padStart(2, "0");
 const dag = String(currentDateTime.getDate()).padStart(2, "0");
 const datumFormatted = `${dag}-${maand}-${jaar}`;
 
-// Tijd formatteren
 const uren = String(currentDateTime.getHours()).padStart(2, "0");
 const minuten = String(currentDateTime.getMinutes()).padStart(2, "0");
 const seconden = String(currentDateTime.getSeconds()).padStart(2, "0");
 const tijdFormatted = `${uren}:${minuten}:${seconden}`;
 
-// Samengestelde datum en tijd
 const dateTimeFormatted = `${datumFormatted} ${tijdFormatted}`;
 
 export default async function handler(req, res) {
