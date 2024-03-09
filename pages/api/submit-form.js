@@ -36,23 +36,23 @@ export default async function handler(req, res) {
             "1. Gebruikt u apps of websites voor sociale contacten? Zo ja, welke?: " +
             socialContact +
             "\n" +
-            "2. Wat zijn op dit moment uw manieren om nieuwe mensen te ontmoeten?: " +
-            howContact +
-            "\n" +
-            "3. Wat vindt u prettig en wat vindt u lastig aan de manier waarop u nu sociale contacten onderhoudt?: " +
-            preferences +
-            "\n" +
-            "4. Stel dat u nieuwe mensen zou willen ontmoeten, wat zou u dan als eerste doen?: " +
-            newConnections +
-            "\n" +
-            "5. Wat maakt een app of website gemakkelijk of moeilijk te gebruiken voor u?: " +
+            "2. Wat maakt een app of website gemakkelijk of moeilijk te gebruiken voor u?: " +
             irritations +
             "\n" +
-            "6. Wat voor functies zouden er volgens u zeker op zo'n ontmoetingsapp/-website moeten zitten? (Bijvoorbeeld chatfunctie, agenda, groepen, etc.): " +
-            functions +
+            "3. Wat zijn op dit moment uw manieren om nieuwe mensen te ontmoeten?: " +
+            howContact +
             "\n" +
-            "7. Zou u liever online of op locatie nieuwe mensen ontmoeten? Waarom?: " +
+            "4. Wat vindt u prettig en wat vindt u lastig aan de manier waarop u nu sociale contacten onderhoudt?: " +
+            preferences +
+            "\n" +
+            "5. Stel dat u nieuwe mensen zou willen ontmoeten, wat zou u dan als eerste doen?: " +
+            newConnections +
+            "\n" +
+            "6. Zou u liever online of op locatie nieuwe mensen ontmoeten? Waarom?: " +
             onlineOffline +
+            "\n" +
+            "7. Wat voor functies zouden er volgens u zeker op een ontmoetingsapp/-website moeten zitten? (Bijvoorbeeld chatfunctie, agenda, groepen, etc.): " +
+            functions +
             "\n" +
             "8. Heeft u verder nog ideeën, wensen of tips om zo'n nieuw ontmoetingsplatform aantrekkelijk en toegankelijk te maken voor ouderen?: " +
             tips +
