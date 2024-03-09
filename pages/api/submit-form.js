@@ -1,29 +1,37 @@
+// Import Notion client to save data
 const { Client } = require("@notionhq/client");
 
+// Initialize the Notion client with authentication
 const notion = new Client({
     auth: process.env.NOTION_API_KEY,
 });
 
+// Get the current date and time
 const currentDateTime = new Date();
 
-const jaar = currentDateTime.getFullYear();
-const maand = String(currentDateTime.getMonth() + 1).padStart(2, "0");
-const dag = String(currentDateTime.getDate()).padStart(2, "0");
-const datumFormatted = `${dag}-${maand}-${jaar}`;
+// Extract and format the current date components
+const year = currentDateTime.getFullYear();
+const month = String(currentDateTime.getMonth() + 1).padStart(2, "0");
+const day = String(currentDateTime.getDate()).padStart(2, "0");
+const dateFormatted = `${day}-${month}-${year}`;
 
-const uren = String(currentDateTime.getHours()).padStart(2, "0");
-const minuten = String(currentDateTime.getMinutes()).padStart(2, "0");
-const seconden = String(currentDateTime.getSeconds()).padStart(2, "0");
-const tijdFormatted = `${uren}:${minuten}:${seconden}`;
+// Extract and format the current time components
+const hours = String(currentDateTime.getHours()).padStart(2, "0");
+const minutes = String(currentDateTime.getMinutes()).padStart(2, "0");
+const seconds = String(currentDateTime.getSeconds()).padStart(2, "0");
+const timeFormatted = `${hours}:${minutes}:${seconds}`;
 
-const dateTimeFormatted = `${datumFormatted} ${tijdFormatted}`;
+const dateTimeFormatted = `${dateFormatted} ${timeFormatted}`;
 
+// Define an async function to handle requests
 export default async function handler(req, res) {
     if (req.method !== "POST") {
         return res.status(405).json({ message: `${req.method} requests are not allowed` });
     }
     try {
         const { age, gender, province, socialContact, howContact, preferences, newConnections, irritations, functions, onlineOffline, tips } = JSON.parse(req.body);
+
+        // Concatenate the form responses into a single string
         let content =
             "1. Gebruikt u apps of websites voor sociale contacten? Zo ja, welke?: " +
             socialContact +
@@ -57,6 +65,8 @@ export default async function handler(req, res) {
             "\n" +
             "11. Selecteer uw provincie: " +
             province;
+
+        // Create a new page in the Notion database
         await notion.pages.create({
             parent: {
                 database_id: process.env.NOTION_DATABASE_ID,
