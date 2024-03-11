@@ -60,7 +60,7 @@ export default async function handler(req, res) {
             "9. Selecteer uw leeftijdscategorie: " +
             age +
             "\n" +
-            "10. Selecteer uw geslacht" +
+            "10. Selecteer uw geslacht: " +
             gender +
             "\n" +
             "11. Selecteer uw provincie: " +
