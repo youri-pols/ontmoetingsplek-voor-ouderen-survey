@@ -1,40 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Enquêtepagina
+Dit is een Next.js project geïnitialiseerd met ``` create-next-app ```, ontwikkeld om inzichten te verzamelen via een enquête. Gebruikers kunnen via de enquêtepagina hun ervaringen en voorkeuren delen over het gebruik van apps en websites voor sociale contacten.
 
-## Getting Started
+## Kenmerken
+- Enquêteformulier: Gebruikers kunnen een reeks vragen beantwoorden over hun sociale contactvoorkeuren, ervaringen met apps/websites, en suggesties voor nieuwe ontmoetingsplatformen.
+- Gegevensopslag: De antwoorden van de enquête worden veilig opgeslagen in een Notion-database, waarbij elk antwoord is gekoppeld aan de datum en tijd van inzending.
 
-First, run the development server:
+## Aan de slag
+Om de ontwikkelserver te starten, voert u het volgende uit:
 
 ```bash
 npm run dev
-# or
+# of
 yarn dev
-# or
+# of
 pnpm dev
-# or
+# of
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in uw browser om het resultaat te zien.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+U kunt beginnen met het bewerken van de pagina door pages/index.tsx aan te passen. De pagina wordt automatisch bijgewerkt terwijl u het bestand bewerkt.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## API-routes
+[API-routes](https://nextjs.org/docs/api-routes/introduction) kunnen worden geraadpleegd op http://localhost:3000/api/submit-form. Deze endpoint kan worden bewerkt in pages/api/submit-form.js.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+De pages/api directory is gemapt naar /api/*. Bestanden in deze directory worden behandeld als [API-routes](https://nextjs.org/docs/api-routes/introduction) in plaats van React-pagina's.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
